@@ -26,6 +26,7 @@
   font-family: "Gilroy Light";
   font-size: 26px;
   line-height: 108%;
+  text-align: center;
   color: #ffffff;
 }
 
@@ -89,7 +90,7 @@
 .header.__active {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  background-color: #af96781c;
+  background-color: #00000075;
   top: 0;
   left: 0;
   z-index: 3;
@@ -99,6 +100,7 @@
 }
 
 .banner {
+  margin-bottom: 144px;
   background: -webkit-gradient(linear, left bottom, left top, from(#3a302538), to(#16120aa6)), url(../img/header/banner.jpg) no-repeat center center/cover;
   background: -o-linear-gradient(bottom, #3a302538, #16120aa6), url(../img/header/banner.jpg) no-repeat center center/cover;
   background: linear-gradient(0deg, #3a302538, #16120aa6), url(../img/header/banner.jpg) no-repeat center center/cover;
@@ -106,7 +108,6 @@
 }
 
 .banner__body {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,7 +138,6 @@
   color: #ffffff;
   text-shadow: 3px 1px 6px rgba(186, 217, 0, 0.26);
   margin-bottom: 20px;
-  max-width: 612px;
 }
 
 .banner__times-left {
@@ -155,9 +155,7 @@
 .banner__times-left-days {
   position: relative;
   background: #ffffff;
-  padding: 6px 13px;
   font-family: "Gilroy Light";
-  font-size: 26px;
   line-height: 108%;
   color: #11100e;
   margin-right: 10px;
@@ -177,9 +175,7 @@
 .banner__times-left-hours {
   position: relative;
   background: #ffffff;
-  padding: 6px 13px;
   font-family: "Gilroy Light";
-  font-size: 26px;
   line-height: 108%;
   margin-right: 10px;
   color: #11100e;
@@ -199,7 +195,6 @@
 .banner__times-left-minutes {
   position: relative;
   background: #ffffff;
-  padding: 6px;
   font-family: "Gilroy Light";
   font-size: 26px;
   line-height: 108%;
@@ -221,9 +216,7 @@
 .banner__times-left-seconds {
   position: relative;
   background: #ffffff;
-  padding: 6px 8px;
   font-family: "Gilroy Light";
-  font-size: 26px;
   line-height: 108%;
   color: #11100e;
 }
@@ -339,8 +332,12 @@
 
 .sale-img {
   position: absolute;
-  top: 0;
+  top: 144px;
   left: 0;
+}
+
+.social-info {
+  font-size: 19px;
 }
 
 .menu-mobile {
@@ -411,7 +408,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 20% 0 0 20%;
+  margin: 150px 0 0 100px;
 }
 
 .menu-mobile__list :not(:last-child) {
@@ -422,6 +419,10 @@
   font-family: "Gilroy Light";
   font-size: 40px;
   color: #ffffff;
+}
+
+.menu-mobile__link:hover {
+  color: #000000;
 }
 
 .menu-mobile.__active {
@@ -529,6 +530,106 @@ h6 {
 
 /*--------------------*/
 
+.mebel-cost {
+  margin-bottom: 145px;
+}
+
+.mebel-cost__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mebel-cost__img {
+  position: relative;
+  margin-right: 88px;
+}
+
+.mebel-cost__img::after {
+  position: absolute;
+  content: "";
+  top: -28px;
+  right: 0;
+  width: 100px;
+  height: 2px;
+  background: #000;
+}
+
+.mebel-cost__img::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: -28px;
+  height: 100px;
+  width: 2px;
+  background: #000;
+}
+
+.mebel-cost__img-wrap {
+  position: relative;
+  width: 360px;
+  height: 544px;
+}
+
+.mebel-cost__img-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mebel-cost__img-wrap::after {
+  position: absolute;
+  content: "";
+  bottom: -28px;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  background: #000;
+}
+
+.mebel-cost__img-wrap::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: -28px;
+  height: 100px;
+  width: 2px;
+  background: #000;
+}
+
+.mebel-cost__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mebel-cost__title {
+  font-family: "Cormorant";
+  font-size: 68px;
+  line-height: 104%;
+  color: #11100e;
+  max-width: 664px;
+  margin-bottom: 26px;
+}
+
+.mebel-cost__subtitle {
+  font-family: "Gilroy";
+  font-size: 30px;
+  max-width: 664px;
+  line-height: 123%;
+  color: #11100e;
+  text-shadow: 1px -1px 7px rgba(186, 217, 0, 0.36);
+  margin-bottom: 34px;
+}
+
 @media (min-width: 320px) {
   .header__logo {
     margin-left: auto;
@@ -554,11 +655,11 @@ h6 {
   }
 
   .banner__content {
-    margin-top: 25%;
+    margin-top: 191px;
     margin-bottom: 1%;
     background: rgba(53, 53, 53, 0.24);
-    -webkit-backdrop-filter: blur(32px);
-            backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
     padding: 32px 16px;
   }
 
@@ -569,9 +670,47 @@ h6 {
 
   .banner__subtitle {
     font-size: 20px;
+    max-width: 290px;
+  }
+
+  .banner__times-left-days {
+    padding: 1px 9px;
+    font-size: 19px;
+  }
+
+  .banner__times-left-days::after {
+    font-size: 15px;
+  }
+
+  .banner__times-left-hours {
+    padding: 1px 9px;
+    font-size: 19px;
+  }
+
+  .banner__times-left-hours::after {
+    font-size: 15px;
+  }
+
+  .banner__times-left-minutes {
+    padding: 1px 4px;
+    font-size: 19px;
+  }
+
+  .banner__times-left-minutes::after {
+    font-size: 15px;
+  }
+
+  .banner__times-left-seconds {
+    padding: 1px 5px;
+    font-size: 19px;
+  }
+
+  .banner__times-left-seconds::after {
+    font-size: 15px;
   }
 
   .banner__social {
+    padding: 0 15px;
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
             transform: translateY(0);
@@ -579,16 +718,15 @@ h6 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .social-info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: 64px;
   }
 
   .menu-mobile {
@@ -596,13 +734,65 @@ h6 {
   }
 }
 
+@media (min-width: 425px) {
+  .banner__social {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .social-info {
+    margin-left: 64px;
+  }
+}
+
 @media (min-width: 768px) {
   .banner__content {
     margin-top: 22%;
-    margin-bottom: 29%;
+    margin-bottom: 18%;
     background: none;
     -webkit-backdrop-filter: blur(0);
             backdrop-filter: blur(0);
+  }
+
+  .banner__times-left-days {
+    padding: 6px 13px;
+    font-size: 26px;
+  }
+
+  .banner__times-left-days::after {
+    font-size: 21px;
+  }
+
+  .banner__times-left-hours {
+    padding: 6px 13px;
+    font-size: 26px;
+  }
+
+  .banner__times-left-hours::after {
+    font-size: 21px;
+  }
+
+  .banner__times-left-minutes {
+    padding: 6px;
+    font-size: 26px;
+  }
+
+  .banner__times-left-minutes::after {
+    font-size: 21px;
+  }
+
+  .banner__times-left-seconds {
+    font-size: 26px;
+    padding: 6px;
+  }
+
+  .banner__times-left-seconds::after {
+    font-size: 21px;
+  }
+
+  .sale-img {
+    display: none;
   }
 }
 
@@ -625,6 +815,7 @@ h6 {
     -webkit-box-pack: unset;
         -ms-flex-pack: unset;
             justify-content: unset;
+    padding: 0;
   }
 
   .social-info {
@@ -641,12 +832,14 @@ h6 {
 
   .banner__subtitle {
     font-size: 33px;
+    max-width: 612px;
   }
 }
 
 @media (min-width: 1024px) {
   .header__logo {
     margin-right: auto;
+    margin-left: 0;
   }
 
   .header__menu-burger {
@@ -666,12 +859,21 @@ h6 {
     font-size: 20px;
   }
 
+  .banner__container {
+    max-width: 1222px;
+    margin: 0 auto;
+  }
+
   .social-info {
     display: none;
   }
 
   .menu-mobile {
     display: none;
+  }
+
+  .mebel-cost__container {
+    padding-left: 35px;
   }
 }
 
@@ -697,9 +899,47 @@ h6 {
   .banner {
     background-attachment: unset !important;
   }
+
+  .mebel-cost__img {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
+  .btn {
+    font-size: 19px;
+    padding: 12px 26px;
+  }
+
+  .banner__times-left-title {
+    font-size: 18px;
+  }
+
+  .banner__phone input {
+    max-width: 100%;
+    font-size: 20px;
+  }
+
+  .banner__phone input::-webkit-input-placeholder {
+    font-size: 20px;
+  }
+
+  .banner__phone input::-moz-placeholder {
+    font-size: 20px;
+  }
+
+  .banner__phone input:-ms-input-placeholder {
+    font-size: 20px;
+  }
+
+  .banner__phone input::-ms-input-placeholder {
+    font-size: 20px;
+  }
+
+  .banner__phone input::placeholder {
+    font-size: 20px;
+  }
+
   .banner__vertical-line1 {
     display: none;
   }
@@ -715,6 +955,38 @@ h6 {
             flex-direction: row;
   }
 }
+
+@media (max-width: 580px) {
+  .banner {
+    margin-bottom: 100px;
+  }
+
+  .menu-mobile__list {
+    margin: 207px 0 0 83px;
+  }
+
+  .menu-mobile__link {
+    font-size: 28px;
+  }
+
+  .mebel-cost__title {
+    font-size: 39px;
+  }
+
+  .mebel-cost__subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .banner__btn {
+    width: 100%;
+  }
+
+  .mebel-cost__btn {
+    width: 100%;
+  }
+}
 @supports (-webkit-appearance:none){
 .banner{background:-webkit-gradient(linear, left bottom, left top, from(#3a302538), to(#16120aa6)), url(../img/header/banner.webp) no-repeat center center/cover}
 .banner{background:-o-linear-gradient(bottom, #3a302538, #16120aa6), url(../img/header/banner.webp) no-repeat center center/cover}
@@ -722,6 +994,14 @@ h6 {
 }
 
  @media (min-width: 320px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (min-width: 425px){
 
 @supports (-webkit-appearance:none){
 
@@ -786,6 +1066,22 @@ h6 {
 }
 
  @media (max-width: 768px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 580px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 425px){
 
 @supports (-webkit-appearance:none){
 
