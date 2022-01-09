@@ -5,16 +5,22 @@ let showMoreBtn = document.querySelector('.about-us__text-more-btn');
 let materials = document.querySelector('.materials__materials');
 let furniture = document.querySelector('.materials__furniture');
 let rowTab = document.querySelector('.row-tabs');
+let materialsTab = document.querySelector('.materials__tab-materials');
+let furnitureTab = document.querySelector('.materials__tab-furniture');
 
 if(furniture) {
    furniture.onclick = function() {
       rowTab.classList.add('__active');
+      materialsTab.style.display = 'none';
+      furnitureTab.style.display = 'block';
    };
 }
 
 if(materials) {
    materials.onclick = function() {
       rowTab.classList.remove('__active');
+      materialsTab.style.display = 'block';
+      furnitureTab.style.display = 'none';
    };
 }
 
@@ -50,3 +56,21 @@ window.onscroll = function showHeader() {
       fixedHeader.classList.remove('__active');
    }
 };
+
+
+
+const swiperTwo = new Swiper('.materials__tab-materials-slider', {
+   spaceBetween: 34,
+   navigation: {
+      nextEl: '.materials__tab-materials-slider-button-next',
+      prevEl: '.materials__tab-materials-slider-button-prev',
+    },
+   breakpoints: {
+      320: {
+         slidesPerView: 1,
+      },
+      768: {
+         slidesPerView: 2,
+      },
+   }
+});
