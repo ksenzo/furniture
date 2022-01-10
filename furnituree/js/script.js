@@ -7,6 +7,9 @@ let furniture = document.querySelector('.materials__furniture');
 let rowTab = document.querySelector('.row-tabs');
 let materialsTab = document.querySelector('.materials__tab-materials');
 let furnitureTab = document.querySelector('.materials__tab-furniture');
+let threeProductRow = document.getElementById('row-three');
+let fourProductRow = document.getElementById('row-four');
+let showMoreBtnTwo = document.querySelector('.offer__products-more-btn');
 
 if(furniture) {
    furniture.onclick = function() {
@@ -21,6 +24,12 @@ if(materials) {
       rowTab.classList.remove('__active');
       materialsTab.style.display = 'block';
       furnitureTab.style.display = 'none';
+   };
+}
+
+if(showMoreBtnTwo) {
+   showMoreBtnTwo.onclick = function() {
+      threeProductRow.classList.add('__active');
    };
 }
 
@@ -73,4 +82,17 @@ const swiperTwo = new Swiper('.materials__tab-materials-slider', {
          slidesPerView: 2,
       },
    }
+});
+
+
+const swiperReview = new Swiper('.review__slider', {
+   navigation: {
+      nextEl: '.review__slider-button-next',
+      prevEl: '.review__slider-button-prev',
+    },
+    pagination: {
+      el: '.review__slider-pagination',
+      clickable: true,
+    },
+   
 });
