@@ -10,12 +10,12 @@ let burgerBtn = document.querySelector('.header__menu-burger');
 let closeBtn = document.querySelector('.menu-mobile__close');
 let body = document.body;
 let popupOpen = document.querySelector('.product__btn');
-let popup = document.querySelector('.popup');
-let popupClose = document.querySelector('.popup__btn');
-let popupConfirm = document.querySelector('.popup__confirm');
-let popupBody = document.querySelector('.popup__body');
-let popupConfirmBtn = document.querySelector('.popup__confirm-btn');
-let closePopupBtn = document.querySelector('.popup__close-popup-btn');
+let popup = document.querySelector('.popup-product-page');
+let popupClose = document.querySelector('.popup-product-page__btn');
+let popupConfirm = document.querySelector('.popup-product-page__confirm');
+let popupBody = document.querySelector('.popup-product-page__body');
+let popupConfirmBtn = document.querySelector('.popup-product-page__confirm-btn');
+let closePopupBtn = document.querySelector('.popup-product-page__close-popup-btn');
 
 
 function changePhoto(photoNumber, photo, sourceNumber, source) {
