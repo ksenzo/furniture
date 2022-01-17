@@ -24,6 +24,17 @@ function changePhoto(photoNumber, photo, sourceNumber, source) {
 }
 
 
+if (popup) {
+   popup.addEventListener('click', function (e) {
+      if (!e.target.closest('.popup-product-page__wrap')) {
+         popup.classList.remove('__active');
+         popupConfirm.classList.remove('__active');
+         popupBody.classList.remove('__active');
+         body.classList.remove('__noscroll');
+      }
+   });
+}
+
 if (smallFirstPhoto) {
    smallFirstPhoto.addEventListener('click', () => changePhoto(
       mainPhoto, 'img/product-page/2.jpg',
@@ -99,4 +110,3 @@ if (popupConfirmBtn) {
       popupConfirm.classList.remove('__active');
    };
 }
-

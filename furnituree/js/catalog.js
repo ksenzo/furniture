@@ -8,6 +8,15 @@ let refreshFilters = document.getElementById('refresh-filters');
 let popup = document.querySelector('.popup-catalog');
 
 
+if (popup) {
+   popup.addEventListener('click', function (e) {
+      if (!e.target.closest('.popup-catalog__container')) {
+         popup.classList.remove('__active');
+         body.classList.remove('__noscroll');
+      }
+   });
+}
+
 if (burgerBtn) {
    let menuMobile = document.querySelector('.menu-mobile');
    burgerBtn.onclick = function () {
@@ -60,3 +69,6 @@ if (popupClose) {
       body.classList.remove('__noscroll');
    };
 }
+
+
+

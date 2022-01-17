@@ -16,10 +16,48 @@ const lockPadding = document.querySelectorAll('.lock-padding');
 let popupChoicePhoto = document.querySelectorAll('.popup-test1__photo');
 let unlock = true;
 const timeout = 800;
+let popupFinishBtn = document.querySelector('.popup-next-btn');
+let getSalebtn = document.querySelector('.popup-test3__final-popup-btn');
+let saleInput = document.querySelector('.popup-test3__final-popup-input');
+let finalPopup = document.querySelector('.popup-test3__final-popup');
 
 
-if (popupChoicePhoto) {
-   popupChoicePhoto.onc
+
+function validateForm() {
+   var x = document.forms.myForm.fname.value.length;
+   if (x <= "10") {
+      saleInput.classList.add('__active');
+   } else if (x > "10") {
+      const popupActive = document.querySelector('.popup.__active');
+      popupActive.classList.remove('__active');
+      body.classList.remove('__noscroll');
+      finalPopup.classList.remove('__active');
+   }
+}
+
+if (finalPopup) {
+   finalPopup.addEventListener('click', function (e) {
+      if (!e.target.closest('.popup-test3__final-popup-body')) {
+         finalPopup.classList.remove('__active');
+      }
+   });
+}
+
+
+if (saleInput) {
+   saleInput.onclick = function () {
+      saleInput.classList.remove('__active');
+   };
+}
+
+if (getSalebtn) {
+   getSalebtn.addEventListener('click', () => validateForm());
+}
+
+if (popupFinishBtn) {
+   popupFinishBtn.onclick = function () {
+      document.querySelector('.popup-test3__final-popup').classList.add('__active');
+   };
 }
 
 if (popupLinks.length > 0) {
@@ -221,3 +259,47 @@ const swiperReview = new Swiper('.review__slider', {
    },
 
 });
+
+
+if (popupChoicePhoto) {
+   for (let i = 0; i < 0; i++) {
+      popupChoicePhoto.onclick = function () {
+         popupChoicePhoto.classList.toggle('__active');
+      };
+   }
+}
+
+window.onresize = function () {
+   document.body.height = window.innerHeight;
+};
+
+window.onresize();
+
+
+
+function startTimer(durationM, displayM, durationS, displayS) {
+   var timer = durationM, minutes, durationS, seconds;
+   setInterval(function () {
+      minutes = parseInt(timer / 60, 10);
+      seconds = parseInt(timer % 60, 10);
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      displayM.textContent = minutes;
+      displayS.textContent = seconds;
+
+      if (--timer < 0) {
+         timer = durationS;
+      }
+   }, 1000);
+}
+
+window.onload = function () {
+   var thirtyMinutes = 60 * 30,
+      displayMinutes = document.querySelector('#minutes');
+   var oneMinutes = 60,
+      displaySeconds = document.querySelector('#seconds');
+   startTimer(thirtyMinutes, displayMinutes, oneMinutes, displaySeconds);
+};
+
